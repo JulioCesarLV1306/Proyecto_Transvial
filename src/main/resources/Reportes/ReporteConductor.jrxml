@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6d4e4c53-f007-4532-bfeb-5536d4470399">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="TablaInformeCon" uuid="21594e22-300e-4d01-b514-ce67b516408b">
+		<queryString language="SQL">
+			<![CDATA[SELECT ic1.ID, ic1.IdConductor, ic1.IdBus, ic1.KmInicial, ic2.KmFinal, ic1.HoraInicio, ic2.HoraFinal, ic1.FechaInicial, ic2.FechaFinal, ic2.FallaMecanica, ic2.Comentario
+FROM informeconductor1 ic1                
+JOIN informeconductor2 ic2 ON ic1.ID = ic2.ID;]]>
+		</queryString>
+		<field name="ID" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="IdConductor" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="IdBus" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="KmInicial" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="KmFinal" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="HoraInicio" class="java.sql.Time">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="HoraFinal" class="java.sql.Time">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="FechaInicial" class="java.sql.Date">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="FechaFinal" class="java.sql.Date">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="FallaMecanica" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="Comentario" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+	</subDataset>
+	<queryString language="SQL">
+		<![CDATA[SELECT ic1.ID, ic1.IdConductor, ic1.IdBus, ic1.KmInicial, ic2.KmFinal, ic1.HoraInicio, ic2.HoraFinal, ic1.FechaInicial, ic2.FechaFinal, ic2.FallaMecanica, ic2.Comentario
+                FROM informeconductor1 ic1
+                JOIN informeconductor2 ic2 ON ic1.ID = ic2.ID;]]>
+	</queryString>
+	<field name="ID" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="IdConductor" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="IdBus" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="KmInicial" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="KmFinal" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="HoraInicio" class="java.sql.Time">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="HoraFinal" class="java.sql.Time">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="FechaInicial" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="FechaFinal" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="FallaMecanica" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Comentario" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="129" splitType="Stretch">
+			<staticText>
+				<reportElement x="227" y="12" width="121" height="20" uuid="7c312e50-6188-45e7-94d7-58dae7db9dad"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[TRANSVIAL LIMA S.A.C]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="686" y="15" width="100" height="20" uuid="a6c8a5d7-379f-490a-81ed-dd6d2efaa2ba"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="127" y="75" width="100" height="20" uuid="7e53b6cb-c931-4335-af25-41c505718e66"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Correo Electronico:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="227" y="35" width="100" height="20" uuid="220acfeb-52f9-4853-b77d-96fae5580239"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[20492404901 ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="227" y="75" width="166" height="20" uuid="356ea0c0-8aeb-43de-aaf0-1298c1465d2a"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[mesadepartes@limatransvial.com]]></text>
+			</staticText>
+			<textField pattern="h.mm a">
+				<reportElement x="686" y="35" width="100" height="20" uuid="2e67b10e-595f-4115-834e-50a17a060e62"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="127" y="11" width="100" height="20" uuid="0f8e7b82-e6a5-42fa-a89d-b49fe5ac5a06"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Empresa::]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="127" y="32" width="100" height="20" uuid="d7f9d178-5f34-42dd-be7a-103c1518699f"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[RUC:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="588" y="75" width="70" height="20" uuid="9f13e589-4045-4ce0-8c93-67a19ded4686"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Telefono:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="127" y="52" width="100" height="20" uuid="929b76ce-08a6-4b5f-9195-459efb372d23"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Direcion:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="227" y="55" width="152" height="20" uuid="d5d483ad-11ce-40b0-ba2f-d4eef6c4054b"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Av. Los Incas, Comas 15313]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="686" y="75" width="83" height="20" uuid="492b7b46-acb9-43af-ba27-ef98bd58989c"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[+ 511 711 0660]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="588" y="15" width="84" height="40" uuid="b638b7e0-8f35-49aa-8396-f02dca1fb31b"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha y Hora de Imprecion:]]></text>
+			</staticText>
+			<image>
+				<reportElement x="21" y="47" width="96" height="20" uuid="8752f598-6421-4291-b9ae-948d5dc37823">
+					<property name="net.sf.jasperreports.export.pdf.tag.h2" value="full"/>
+				</reportElement>
+				<imageExpression><![CDATA["D:\\desarrollo\\ProyectTransvial\\src\\main\\resources\\IMG\\logo2.png"]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="21" y="114" width="765" height="1" uuid="8ea58ed8-6d88-4824-a833-02fcbf98387b"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="21" y="1" width="765" height="25" backcolor="#3399FF" uuid="41e954eb-2f76-443f-841a-ad2e4f8cbde8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[REPORTE DE INFORMES DE CONDUCTORES  DE TRANSVIAL]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<componentElement>
+				<reportElement key="table" style="table" x="33" y="35" width="360" height="50" uuid="5e5faed4-4d81-44d9-8282-210e6dd255aa"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="TablaInformeCon" uuid="c661c829-eaaf-437a-869b-f45e139d347e">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="40" uuid="ca566c22-6933-4d88-a369-9410178bc06b">
+						<jr:columnHeader style="table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="40" height="30" uuid="1f0a840b-5df8-4d13-a512-5c1a3c460e31"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<text><![CDATA[ID]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="40" height="20" uuid="dbed6068-68d1-44e7-94f4-49063a6a6075"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{ID}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="58" uuid="43b65039-4df1-4620-98fa-46b25f48a4e4">
+						<jr:columnHeader style="table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="56" height="30" uuid="5193eaa5-47e0-4809-8063-83fb8a63b19f"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<text><![CDATA[IdConductor]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="56" height="20" uuid="a0d3830d-89be-4960-a900-d57beda0aeb0"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{IdConductor}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="49" uuid="f5d12215-b8b0-4cf4-99d0-febbd1eb6ad5">
+						<jr:columnHeader style="table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="47" height="30" uuid="d45dded2-e048-496a-b4dd-9494376865a8"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<text><![CDATA[IdBus]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="47" height="20" uuid="6063ef7e-99ca-462c-a120-4397d7257a7c"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{IdBus}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="70" uuid="5f554837-0eb3-410a-9404-ae8eaa96fbb7">
+						<jr:columnHeader style="table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="70" height="30" uuid="476f0e0b-380c-4732-b8af-15ca39a68889"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<text><![CDATA[KmInicial]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="70" height="20" uuid="cf94891a-60c3-4dc8-8fa2-222ee021e4f1"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{KmInicial}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="69" uuid="7532fd83-637b-4b92-afdb-d41062507b76">
+						<jr:columnHeader style="table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="69" height="30" uuid="93475fe2-b315-4af0-9822-942f475f6625"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<text><![CDATA[KmFinal]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="69" height="20" uuid="821bd9d8-e4d3-488e-bd2e-fce60e328263"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{KmFinal}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="64" uuid="f05eeb21-f953-44f3-a5f2-9721e3a7e937">
+						<jr:columnHeader style="table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="64" height="30" uuid="22c78ed6-b1be-4f87-b6ee-22bd5df1ff10"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<text><![CDATA[HoraInicio]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="64" height="20" uuid="529fc16b-cb30-479c-8247-ade409857096"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{HoraInicio}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="70" uuid="77ad64f7-17ed-4669-ae2f-15f16d1a00c2">
+						<jr:columnHeader style="table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="70" height="30" uuid="d0afaf93-da53-4ce4-ac59-17d3c8129ce9"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<text><![CDATA[HoraFinal]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="70" height="20" uuid="f9c67b47-e828-4e21-9533-f02b30c71fda"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{HoraFinal}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="68" uuid="c97f9e84-1faf-4762-9c2c-75dcd8a2e986">
+						<jr:columnHeader style="table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="67" height="30" uuid="3010c63b-c008-46e3-b566-71dfe26eccff"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<text><![CDATA[FechaInicial]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="67" height="20" uuid="b1e9e577-055c-40c4-9a23-6cedddbf02a8"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{FechaInicial}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="68" uuid="6977dd0a-e564-4d24-841e-10bc84ee9b2c">
+						<jr:columnHeader style="table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="67" height="30" uuid="8a6ed8d5-e83f-4f7b-974d-430078baaca3"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<text><![CDATA[FechaFinal]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="67" height="20" uuid="7cf554e1-a743-4f23-8cb3-b32e7d0da283"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{FechaFinal}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="67" uuid="179bfa1b-1b0f-43ad-8f3c-9bfcfc9007d2">
+						<jr:columnHeader style="table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="66" height="30" uuid="faf43e87-545e-47f5-b140-1df974cc86bb"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<text><![CDATA[FallaMecanica]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="66" height="20" uuid="c7f8530f-b0de-40ac-95ac-fb816e178dde"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{FallaMecanica}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="067f593b-3c04-4990-b654-b03708e0f6f8">
+						<jr:columnHeader style="table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="3d1fb2ae-3316-43f5-a270-1110597c3d7d"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<text><![CDATA[Comentario]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="72e114af-ef7e-4ab3-828d-9b51e09c587a"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{Comentario}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="3" y="0" width="799" height="44" uuid="354caf5c-db0b-4aed-8615-ee26c8e8e39b"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<text><![CDATA[Presentación impresa de reportes de informes generados por los conductores de Transvial. Optimiza la supervisión y toma de decisiones. Información en https://www.limatransvial.com/.]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>
