@@ -214,12 +214,12 @@ public class ControladorMecanico implements ActionListener {
         modelo.setRowCount(0);
     }
     
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         
         VistaMecanico1 v = new VistaMecanico1();
         ControladorMecanico c = new ControladorMecanico(v);
         
         v.setVisible(true);
         v.setLocationRelativeTo(null);
-    }
+    }*/
 }

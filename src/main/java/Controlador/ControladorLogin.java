@@ -89,9 +89,9 @@ public class ControladorLogin implements ActionListener {
         }
     }
 
-    public static void main(String[] args) {
+   /* public static void main(String[] args) {
         Vistas.Login v = new Login();
         ControladorLogin c = new ControladorLogin(v);
         v.setVisible(true);
-    }
+    }*/
 }

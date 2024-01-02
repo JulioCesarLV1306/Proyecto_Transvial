@@ -170,11 +170,11 @@ public class ControladorConductor implements ActionListener {
         vista.jcomboIdbus2.setModel(comboBoxModel);
 
     }
-    public static void main(String[] args) {
+  /*  public static void main(String[] args) {
         VistaConductor v = new VistaConductor();
         ControladorConductor c = new ControladorConductor(v);
         
         v.setVisible(true);
         v.setLocationRelativeTo(null);
-    }
+    }*/
 }
